@@ -92,6 +92,9 @@
                     <th>
                         Status
                     </th>
+                    <th>
+                        Level
+                    </th>
                 </tr>
                 {% for d in user.department%}
                     <tr>
@@ -101,6 +104,9 @@
                         <td>
                             <span class="dept-tag status-text-{{d.status}}">{{d.status}}
                             </span>
+                        </td>
+                        <td>
+                            {{d.level}}
                         </td>
                     </tr>
                 {% endfor %}

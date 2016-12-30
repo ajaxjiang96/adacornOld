@@ -10,8 +10,13 @@
     "stunum": "999810557",
     "wechat": "Livvvvia",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "4",
     "status": "active",
@@ -28,8 +33,13 @@
     "stunum": "999888126",
     "wechat": "sugerladen",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "4",
     "status": "active",
@@ -46,8 +56,13 @@
     "stunum": "1000303405",
     "wechat": "327361866",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3+PEY",
     "status": "active",
@@ -64,8 +79,13 @@
     "stunum": "1000642316",
     "wechat": "shenxicheng222677",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "pey",
     "status": "active",
@@ -82,8 +102,13 @@
     "stunum": "1001095076",
     "wechat": "haiqi96",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -100,8 +125,13 @@
     "stunum": "1001106313",
     "wechat": "caojing0521",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -118,8 +148,13 @@
     "stunum": "1001215758",
     "wechat": "Jack-608",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -136,8 +171,13 @@
     "stunum": "1001243451",
     "wechat": "451622258",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -154,8 +194,13 @@
     "stunum": "1001250086",
     "wechat": "Saul_hau",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -172,8 +217,13 @@
     "stunum": "1002057711",
     "wechat": "Helen_Bai_",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -190,8 +240,13 @@
     "stunum": "1002057748",
     "wechat": "shuifanzz",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -208,8 +263,13 @@
     "stunum": "1002058453",
     "wechat": "Marshall_Islands",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -226,8 +286,13 @@
     "stunum": "1002077753",
     "wechat": "1029842177",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -244,8 +309,13 @@
     "stunum": "1002170553",
     "wechat": "cara621168",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -262,8 +332,13 @@
     "stunum": "1002206784",
     "wechat": "brunhilde14",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -280,8 +355,13 @@
     "stunum": "1002213446",
     "wechat": "Kahn2xu",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -298,11 +378,17 @@
     "stunum": "1002220964",
     "wechat": "ZC175JES",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -319,8 +405,13 @@
     "stunum": "1002252956",
     "wechat": "chenfeng307187178",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -337,8 +428,13 @@
     "stunum": "1002272587",
     "wechat": "yhy951224",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -355,8 +451,13 @@
     "stunum": "1002287955",
     "wechat": "YuanJi0112",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -373,8 +474,13 @@
     "stunum": "1002288419",
     "wechat": "darkagentz",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -391,8 +497,13 @@
     "stunum": "1002335699",
     "wechat": "taryna",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -409,8 +520,13 @@
     "stunum": "1002463096",
     "wechat": "wy03211997",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -427,8 +543,13 @@
     "stunum": "1002475056",
     "wechat": "Nina19970425",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -445,8 +566,13 @@
     "stunum": "1002488293",
     "wechat": "txc_Stella",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -463,8 +589,13 @@
     "stunum": "1002594506",
     "wechat": "wuyizhi261",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -481,8 +612,13 @@
     "stunum": "1002616458",
     "wechat": "GodSophy",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -499,8 +635,13 @@
     "stunum": "1002643142",
     "wechat": "jonathonyan",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -517,8 +658,13 @@
     "stunum": "1002668446",
     "wechat": "wang970613970613",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -535,8 +681,13 @@
     "stunum": "1002738941",
     "wechat": "neji0703012587",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -553,8 +704,13 @@
     "stunum": "1003060279",
     "wechat": "Liao_Henry1997",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -571,8 +727,13 @@
     "stunum": "1003271906",
     "wechat": "hyjily221",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -589,8 +750,13 @@
     "stunum": "1003442492",
     "wechat": "kmomuphnie",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -607,8 +773,13 @@
     "stunum": "1003442492",
     "wechat": "kmomuphnie",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -625,8 +796,13 @@
     "stunum": "1003578005",
     "wechat": "lihai199701",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -643,8 +819,13 @@
     "stunum": "1003162551",
     "wechat": "lbqrdfzxsxx",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -661,8 +842,13 @@
     "stunum": "1001106313",
     "wechat": "caojing0521",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -679,8 +865,13 @@
     "stunum": "1001510162",
     "wechat": "chenj209",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -697,8 +888,13 @@
     "stunum": "1003373431",
     "wechat": "614408413",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -715,8 +911,13 @@
     "stunum": "1002352777",
     "wechat": "jy05110515",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -733,8 +934,13 @@
     "stunum": "1001746435",
     "wechat": "kylinlei370",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -751,8 +957,13 @@
     "stunum": "1003139187",
     "wechat": "kevinguo-beijing",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -769,8 +980,13 @@
     "stunum": "1002428731",
     "wechat": "ldphkk",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -787,8 +1003,13 @@
     "stunum": "1001480088",
     "wechat": "418321497",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -805,8 +1026,13 @@
     "stunum": "1003022739",
     "wechat": "Flora011235589",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -823,8 +1049,13 @@
     "stunum": "1001239395",
     "wechat": "panssion",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -841,8 +1072,13 @@
     "stunum": "1001385930",
     "wechat": "BravoTerry",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -859,8 +1095,13 @@
     "stunum": "1001204671",
     "wechat": "wxidluanma",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -877,8 +1118,13 @@
     "stunum": "1002095207",
     "wechat": "monkeykingg630",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -895,8 +1141,13 @@
     "stunum": "1002951004",
     "wechat": "Richie_ZHL",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -913,8 +1164,13 @@
     "stunum": "1003043887",
     "wechat": "15527015823",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -931,8 +1187,13 @@
     "stunum": "1002140916",
     "wechat": "Edward321002",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -949,8 +1210,13 @@
     "stunum": "1003326046",
     "wechat": "359137154",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -967,8 +1233,13 @@
     "stunum": "997412367",
     "wechat": "BlueMeteor56",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -985,8 +1256,13 @@
     "stunum": "1001749085",
     "wechat": "sherry3315",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -1003,8 +1279,13 @@
     "stunum": "1002839690",
     "wechat": "-",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -1021,8 +1302,13 @@
     "stunum": "1002956964",
     "wechat": "315467867",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "master",
     "status": "active",
@@ -1039,8 +1325,13 @@
     "stunum": "1002146377",
     "wechat": "Krystalyang2",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -1057,8 +1348,13 @@
     "stunum": "1002109470",
     "wechat": "ztyzhao",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -1075,8 +1371,13 @@
     "stunum": "1002674073",
     "wechat": "18033091996",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -1093,8 +1394,13 @@
     "stunum": "",
     "wechat": "Tangoroxy",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "2",
     "status": "active",
@@ -1111,8 +1417,13 @@
     "stunum": "1002943407",
     "wechat": "newdriverzjb",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -1129,6 +1440,7 @@
     "stunum": "1000225641",
     "wechat": "OhBoyOhGod",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1147,6 +1459,7 @@
     "stunum": "1000402290",
     "wechat": "Fraser-007",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1165,9 +1478,11 @@
     "stunum": "1000670348",
     "wechat": "imba93",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1186,6 +1501,7 @@
     "stunum": "1000673327",
     "wechat": "yesiyang01",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1204,6 +1520,7 @@
     "stunum": "1000919955",
     "wechat": "ailsa_fang",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1222,6 +1539,7 @@
     "stunum": "1001097476",
     "wechat": "sinoforever",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1240,6 +1558,7 @@
     "stunum": "1001104734",
     "wechat": "308313553",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1258,6 +1577,7 @@
     "stunum": "1001111487",
     "wechat": "1036498301",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1276,6 +1596,7 @@
     "stunum": "1001113957",
     "wechat": "pengshichong001",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1294,6 +1615,7 @@
     "stunum": "1001127540",
     "wechat": "454791034",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1312,9 +1634,11 @@
     "stunum": "1001141775",
     "wechat": "zzn_Baker",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1333,6 +1657,7 @@
     "stunum": "1001172143",
     "wechat": "Rio_Liyue",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1351,6 +1676,7 @@
     "stunum": "1001188109",
     "wechat": "starsoul649782182",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1369,6 +1695,7 @@
     "stunum": "1001299944",
     "wechat": "kmlmml",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1387,6 +1714,7 @@
     "stunum": "1001332596",
     "wechat": "1010205061",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1405,9 +1733,11 @@
     "stunum": "1001361000",
     "wechat": "ryanyan003",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1426,6 +1756,7 @@
     "stunum": "1001385645",
     "wechat": "chenmh1108",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1444,9 +1775,11 @@
     "stunum": "1001408005",
     "wechat": "Xein4747",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1465,6 +1798,7 @@
     "stunum": "1001509067",
     "wechat": "835265064",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1483,6 +1817,7 @@
     "stunum": "1001772548",
     "wechat": "clz19960901",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1501,6 +1836,7 @@
     "stunum": "1001795104",
     "wechat": "jxmxtww",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1519,6 +1855,7 @@
     "stunum": "1002073196",
     "wechat": "381413139",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1537,9 +1874,11 @@
     "stunum": "1002109826",
     "wechat": "ka262012",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1558,6 +1897,7 @@
     "stunum": "1002172542",
     "wechat": "944243437",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1576,6 +1916,7 @@
     "stunum": "1002268734",
     "wechat": "RICHARD",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1594,6 +1935,7 @@
     "stunum": "1002376617",
     "wechat": "744095609",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1612,6 +1954,7 @@
     "stunum": "1002448951",
     "wechat": "Hi-World0275",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1630,6 +1973,7 @@
     "stunum": "1002454836",
     "wechat": "cbw_yy",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1648,6 +1992,7 @@
     "stunum": "1002529427",
     "wechat": "FANGqiqin",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1666,9 +2011,11 @@
     "stunum": "1002594560",
     "wechat": "yushunzhe1104",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1687,6 +2034,7 @@
     "stunum": "1002594560",
     "wechat": "yushunzhe1104",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1705,6 +2053,7 @@
     "stunum": "1002748716",
     "wechat": "zlxguxin",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1723,6 +2072,7 @@
     "stunum": "1002770539",
     "wechat": "Genius_Hui",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1741,6 +2091,7 @@
     "stunum": "1003261253",
     "wechat": "Kalchainein",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1759,6 +2110,7 @@
     "stunum": "1001214624",
     "wechat": "dall8877856",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1777,6 +2129,7 @@
     "stunum": "1000225641",
     "wechat": "OhBoyOhGod",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1795,6 +2148,7 @@
     "stunum": "1001375852",
     "wechat": "438410248",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -1813,9 +2167,11 @@
     "stunum": "1002057935",
     "wechat": "lydianingyue",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
     }],
@@ -1834,9 +2190,11 @@
     "stunum": "1003642971",
     "wechat": "gurgey",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
     }],
@@ -1855,9 +2213,11 @@
     "stunum": "1002123891",
     "wechat": "smilewujiwww",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
     }],
@@ -1876,9 +2236,11 @@
     "stunum": "1000920514",
     "wechat": "CaMio_zhimo",
     "department": [{
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "hr",
         "status": "active"
     }],
@@ -1897,6 +2259,7 @@
     "stunum": "1000385022",
     "wechat": "mirror50",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -1915,6 +2278,7 @@
     "stunum": "1000517719",
     "wechat": "emilyma0411",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -1933,9 +2297,11 @@
     "stunum": "1001359996",
     "wechat": "AjaxJiang96",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -1954,6 +2320,7 @@
     "stunum": "1001370599",
     "wechat": "1275359212",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -1972,6 +2339,7 @@
     "stunum": "1001373569",
     "wechat": "lo1155665",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -1990,6 +2358,7 @@
     "stunum": "1002183068",
     "wechat": "645742953",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2008,6 +2377,7 @@
     "stunum": "1002271356",
     "wechat": "kkight",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2026,6 +2396,7 @@
     "stunum": "1003472155",
     "wechat": "dodox_x",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2044,6 +2415,7 @@
     "stunum": "1003706732",
     "wechat": "447405024542",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2062,6 +2434,7 @@
     "stunum": "1001606390",
     "wechat": "iamyuchy",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2080,6 +2453,7 @@
     "stunum": "",
     "wechat": "lionheartxiong",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2098,6 +2472,7 @@
     "stunum": "1001104565",
     "wechat": "Ln_mavis",
     "department": [{
+        "level": 1,
         "dept": "design",
         "status": "active"
     }],
@@ -2116,9 +2491,11 @@
     "stunum": "1001383031",
     "wechat": "tiamogloria",
     "department": [{
+        "level": 5,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 5,
         "dept": "hr",
         "status": "active"
     }],
@@ -2137,6 +2514,7 @@
     "stunum": "1000730809",
     "wechat": "feanorx",
     "department": [{
+        "level": 1,
         "dept": "hr",
         "status": "active"
     }],
@@ -2155,6 +2533,7 @@
     "stunum": "999717409",
     "wechat": "Y-Rayyyy",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2173,6 +2552,7 @@
     "stunum": "1000182438",
     "wechat": "Gilgamel",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2181,7 +2561,7 @@
     "major": "EAS | STA | RLG"
 }, {
     "lastName": "Xiao",
-    "firstName": "yaxi",
+    "firstName": "Yaxi",
     "firstNameEnglish": "Yaxi",
     "chineseName": "肖雅茜",
     "preferredName": "Cici",
@@ -2191,6 +2571,7 @@
     "stunum": "1000263751",
     "wechat": "yaxi_0000",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2209,6 +2590,7 @@
     "stunum": "1000510235",
     "wechat": "xxtt6137",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2227,6 +2609,7 @@
     "stunum": "1000515926",
     "wechat": "martinrenls",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2245,6 +2628,7 @@
     "stunum": "1000676681",
     "wechat": "kilakey",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2263,6 +2647,7 @@
     "stunum": "1000802410",
     "wechat": "keensword-bo",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2281,9 +2666,11 @@
     "stunum": "1001127700",
     "wechat": "fjy19960305",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2302,6 +2689,7 @@
     "stunum": "1001234504",
     "wechat": "Laohe131",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2320,6 +2708,7 @@
     "stunum": "1001469038",
     "wechat": "dorodorodorodoro",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2338,6 +2727,7 @@
     "stunum": "1002166979",
     "wechat": "Grace__Xyy",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2356,6 +2746,7 @@
     "stunum": "1002172560",
     "wechat": "736762018",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2374,6 +2765,7 @@
     "stunum": "1002424584",
     "wechat": "1766246000",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2392,6 +2784,7 @@
     "stunum": "1002526493",
     "wechat": "litostly",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2410,6 +2803,7 @@
     "stunum": "1002526527",
     "wechat": "Bobbykee",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2428,6 +2822,7 @@
     "stunum": "1002601008",
     "wechat": "Linjiaping_Peter",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2446,6 +2841,7 @@
     "stunum": "1002912798",
     "wechat": "JW0906luck",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2464,6 +2860,7 @@
     "stunum": "1003193402",
     "wechat": "annieyxzhang",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2482,6 +2879,7 @@
     "stunum": "1003218877",
     "wechat": "livia329587",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2500,6 +2898,7 @@
     "stunum": "1003222782",
     "wechat": "Karin 961126",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2518,6 +2917,7 @@
     "stunum": "1003488512",
     "wechat": "没套路的Anthony🌚",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }],
@@ -2536,11 +2936,17 @@
     "stunum": "1000654188",
     "wechat": "shirleyhao001",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -2557,11 +2963,17 @@
     "stunum": "1000654188",
     "wechat": "shirleyhao001",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "3",
     "status": "active",
@@ -2578,9 +2990,11 @@
     "stunum": "1000024118",
     "wechat": "ellin_li",
     "department": [{
+        "level": 1,
         "dept": "marketing",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "beta",
         "status": "active"
     }],
@@ -2599,9 +3013,11 @@
     "stunum": "973551564",
     "wechat": "Harrus",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2620,6 +3036,7 @@
     "stunum": "1000253557",
     "wechat": "katherine-karin",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2638,6 +3055,7 @@
     "stunum": "1001114448",
     "wechat": "749997475",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2656,6 +3074,7 @@
     "stunum": "1001159060",
     "wechat": "yuyehan0217",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2674,6 +3093,7 @@
     "stunum": "1001650698",
     "wechat": "517041058",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2692,6 +3112,7 @@
     "stunum": "1002087500",
     "wechat": "yqyqzlnl",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2710,6 +3131,7 @@
     "stunum": "1002402731",
     "wechat": "sirhehehehehe",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2728,6 +3150,7 @@
     "stunum": "1000872282",
     "wechat": "sirwoodoo",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }],
@@ -2746,9 +3169,11 @@
     "stunum": "1002706459",
     "wechat": "364436218",
     "department": [{
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "hr",
         "status": "active"
     }],
@@ -2767,12 +3192,15 @@
     "stunum": "1002115347",
     "wechat": "354943262",
     "department": [{
+        "level": 1,
         "dept": "core",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "pr",
         "status": "active"
     }, {
+        "level": 1,
         "dept": "sponsor",
         "status": "active"
     }],
@@ -2791,6 +3219,7 @@
     "stunum": "1002350136",
     "wechat": "HoshinoMarisa",
     "department": [{
+        "level": 1,
         "dept": "sponsor",
         "status": "active"
     }],
@@ -2810,8 +3239,13 @@
     "stunum": "1002795040",
     "wechat": "xiguatuzi",
     "department": [{
+        "level": 1,
         "dept": "alpha",
         "status": "active"
+    }, {
+        "dept": "beta",
+        "level": 0,
+        "status": "assessing"
     }],
     "year": "1",
     "status": "active",
@@ -2828,6 +3262,7 @@
     "stunum": "1002257880",
     "wechat": "501725491",
     "department": [{
+        "level": 1,
         "dept": "hr",
         "status": "active"
     }],

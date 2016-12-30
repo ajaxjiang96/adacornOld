@@ -15,7 +15,7 @@ let departmentSchema = new Schema(
             type: [String], default: []
         },
         members: {
-            type: [String], default: []
+            type: [], default: []
         }
     },
     {
@@ -27,8 +27,8 @@ let departmentSchema = new Schema(
 //     0: Applicant
 //     1: Member
 //     2: Dept VP
-//     4: VP
-//     5: P
+//     3: VP
+//     4: P
 
 let memberSchema = new Schema(
     {
@@ -89,9 +89,9 @@ let memberSchema = new Schema(
         // project: {
         //     project: [Schema.Types.ObjectId]
         // },
-        priority: {
-            type: "number", default: 1
-        }
+        // level: {
+        //     type: "number", default: 1
+        // }
     },
     {
         collection: 'members'
@@ -100,7 +100,7 @@ let memberSchema = new Schema(
 
 // userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 
-mongoose.connect('mongodb://localhost/membersdb');
+mongoose.connect('mongodb://localhost/adacorndb');
 
 let schema = {'Member': mongoose.model('Member', memberSchema),
               'Department': mongoose.model('Department', departmentSchema)

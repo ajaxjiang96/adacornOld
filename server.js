@@ -55,8 +55,9 @@ app.listen(process.env.PORT||3000, function () {
 app.get('/', sys.getHome);
 app.get('/m', sys.getAllMembers);
 // app.get('/m/:id', sys.getMember);
-app.get("/d", sys.getAllDepartments)
-app.get("/dj", sys.parseDeptJSON)
+app.get("/d", sys.getAllDepartments);
+app.get("/d/:dept", sys.getDept)
+app.get("/dj", sys.parseDeptJSON);
 
 app.get("/a", sys.getAddMember);
 app.get("/p", sys.parseDept);

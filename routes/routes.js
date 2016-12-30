@@ -66,10 +66,12 @@ module.exports = {
                 "wechat": "AjaxJiang96",
                 "department": [{
                     "dept": "core",
-                    "status": "active"
+                    "status": "active",
+                    "level": 1
                 }, {
                     "dept": "design",
-                    "status": "active"
+                    "status": "active",
+                    "level": 4
                 }],
                 "year": "3",
                 "status": "active",
@@ -131,10 +133,55 @@ module.exports = {
             if (err) {
                 return res.send(err);
             }
+            for (let i = 0; i < departments.length; i++) {
+                departments[i].count = 0;
+                for (let j = 0; j < departments[i].members.length; j++) {
+                    if (departments[i].members[j].status == "active") {
+                        departments[i].count++;
+                    }
+                }
+                console.log(departments[i].count);
+                // console.log(departments[i]);
+            }
             return res.render("departments.html", {
                 departments: departments
             });
         });
+    },
+
+    getDept: function(req, res) {
+        console.log(req.params.dept);
+        db.Department.findOne({
+            name: req.params.dept
+        }, function(err, dept) {
+            if (err) {
+                return res.send(err);
+            } else {
+                if (dept) {
+                    let members = [];
+                    db.Member.find({
+                            _id: {
+                                $in: dept.members
+                            }
+                        },
+                        function(err, members) {
+                            if (err) {
+                                return res.send(err);
+                            } else {
+                                console.log(members);
+
+                                return res.render("department.html", {
+                                    dept: dept,
+                                    members: members
+                                });
+                            }
+                        })
+                } else {
+                    res.send("Error: department not found");
+                }
+            }
+        });
+
     },
 
     parseDept: function(req, res) {
@@ -142,21 +189,31 @@ module.exports = {
         // var courseObj;
 
         // read ta info
-        fs.readFile('./demo.json', 'utf-8', function(err, data) {
+        fs.readFile('./demoparsed.json', 'utf-8', function(err, data) {
             if (err) throw err;
             let memberObj = JSON.parse(data);
             // console.log(data);
             // console.log(memberObj);
 
             for (let i = 0; i < memberObj.length; i++) {
-                let newDepts = [];
+                let inalpha, inbeta = false;
                 for (let j = 0; j < memberObj[i].department.length; j++) {
-                    let newDept = {};
-                    newDept.dept = memberObj[i].department[j];
-                    newDept.status = "active";
-                    newDepts.push(newDept);
+                    if (memberObj[i].department[j].dept == "alpha") {
+                        inalpha = true;
+                    }
                 }
-                memberObj[i].department = newDepts;
+                for (let k = 0; k < memberObj[i].department.length; k++) {
+                    if (memberObj[i].department[k].dept == "beta") {
+                        inbeta = true;
+                    }
+                }
+                if (inalpha && !inbeta) {
+                    memberObj[i].department.push({
+                        dept: "beta",
+                        level: 0,
+                        status: "assessing"
+                    })
+                }
             }
             res.send(memberObj);
         });
@@ -194,31 +251,28 @@ module.exports = {
                 "beta": {
                     "name": "beta",
                     "p": "Yu Shunzhe",
-                    "vp": ["Yan Ruoshui"],
+                    "vp": ["Yan Ruoshui", "Zhou Zehui", "Zhu Zining", "Yang Jiushan"],
                     "members": []
                 },
                 "alpha": {
                     "name": "alpha",
-                    "p": "Yu Shunzhe",
-                    "vp": ["Yan Ruoshui"],
+                    "p": "Zhang Ci",
                     "members": []
                 },
                 "pr": {
                     "name": "pr",
-                    "p": "Yu Shunzhe",
-                    "vp": ["Yan Ruoshui"],
+                    "p": "Zhang Chi",
                     "members": []
                 },
                 "hr": {
                     "name": "hr",
-                    "p": "Yu Shunzhe",
-                    "vp": ["Yan Ruoshui"],
+                    "p": "Xu Zhicheng",
+                    "vp": ["Ye Zhimo"],
                     "members": []
                 },
                 "sponsor": {
                     "name": "sponsor",
-                    "p": "Yu Shunzhe",
-                    "vp": ["Yan Ruoshui"],
+                    "p": "Zhu Bihan",
                     "members": []
                 }
             }
@@ -230,10 +284,12 @@ module.exports = {
                         for (let i = 0; i < members.length; i++) {
                             console.log(members);
                             for (let j = 0; j < members[i].department.length; j++) {
-                                departs[members[i].department[j].dept].members.push({
-                                    id: members[i]._id,
-                                    status: members[i].department[j].status
-                                });
+                                // departs[members[i].department[j].dept].members.push({
+                                //     id: members[i]._id,
+                                //     status: members[i].department[j].status,
+                                //     level: members[i].department[j].level
+                                // });
+                                departs[members[i].department[j].dept].members.push(members[i]._id);
                             }
                         }
                         res.send(departs);

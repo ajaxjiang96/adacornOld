@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="container">
+        <h1>{{dept.name}}</h1>
+
+        <div class="panel">
+            <h2>Info</h2>
+            <table>
+                <tr>
+                    <th class="vertical">
+                        President
+                    </th>
+                    <td>
+                        {{dept.p}}
+                    </td>
+                </tr>
+                {% for vp in dept.vp %}
+                <tr>
+                    <th class="vertical">
+                        Vice President
+                    </th>
+                    <td>
+                        {{vp}}
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <th class="vertical">
+                        Active Members
+                    </th>
+                    <td>
+
+                    </td>
+                </tr>
+        </table>
+        </div>
+
+        <div class="panel">
+            <h2>Members</h2>
+            {% include "memberActionBar.html" %}
+            <table>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="checkAll" />
+                    </th>
+                    <th>
+                        Student ID
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Preferred Name
+                    </th>
+                    <th>
+                        UTmail
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Level
+                    </th>
+                </tr>
+                {% for m in members %}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="members" value={{m._id}} />
+                    </td>
+                    <td>
+                        {{m.stunum}}
+                    </td>
+                    <td>
+                        {{m.lastName}}
+                    </td>
+                    <td>
+                        {{m.firstName}}
+                    </td>
+                    <td>
+                        {{m.preferredName}}
+                    </td>
+                    <td>
+                        <a href="mailto:{{m.UTmail}}">{{m.UTmail}}</a>
+                    </td>
+                    <td>
+                        <a href="tel:{{m.phone}}">{{m.phone}}</a>
+                    </td>
+                    <td>
+                        {{m.status}}
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+        </div>
+    </div>
+{% endblock %}

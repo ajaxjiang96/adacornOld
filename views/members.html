@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block body %}
 <script src="../js/members.js"></script>
+{% include "memberActionBar.html" %}
 
 <div id="actionBar">
     Filter:
@@ -48,9 +49,9 @@
             <th id="phone" class="sort">
                 Phone
             </th>
-            <th id="priority" class="sort">
+            <!-- <th id="priority" class="sort">
                 Priority
-            </th>
+            </th> -->
         </tr>
         {% for member in members %}
         <tr>
@@ -72,23 +73,15 @@
             <td>
                 {% for d in member.department %}<span class="dept-tag status-{{d.status}}">{{d.dept}} </span>{% endfor %}
             </td>
-
-            {#
-            <td>
-                {{member.gender}}
-            </td>
-            <td>
-                {{member.birthday}}
-            </td> #}
             <td>
                 <a href="mailto:{{member.email}}">{{member.email}}</a>
             </td>
             <td>
                 <a href="tel:{{member.phone}}">{{member.phone}}</a>
             </td>
-            <td>
+            <!-- <td>
                 {{member.priority}}
-            </td>
+            </td> -->
         </tr>
         {% endfor %}
     </table>
