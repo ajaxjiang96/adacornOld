@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block body %}
+<script src="../js/members.js"></script>
+
+<div id="actionBar">
+    Filter:
+    <select id="filterSelector" name="filter">
+        <option value="default" selected disabled>---filter---</option>
+        <option value="dept">Department</option>
+        <option value="year">Year Joint</option>
+    </select>
+    <select id="filterContentSelector" name="filter" disabled>
+        <option value="default" selected disabled>---filter---</option>
+    </select>
+    <button id="applyFilterButton">Apply</button>
+    | Action:
+    <button id="deleteButton">Delete</button>
+    <button id="emailButton">Email</button>
+    | Download:
+    <button id="downloadCSVButton">CSV</button>
+    <button id="downloadJSONButton">JSON</button>
+
+</div>
+
+<form id="memberForm">
+    <table>
+        <tr>
+            <th>
+                <input type="checkbox" id="checkAll" />
+            </th>
+            <th id="stunum" class="sort">
+                ID
+            </th>
+            <th id="lastName" class="sort">
+                Last Name
+            </th>
+            <th id="firstName" class="sort">
+                First Name
+            </th>
+            <th id="preferredName" class="sort">
+                Preferred Name
+            </th>
+            <th id="dept" class="">
+                Departments
+            </th>
+            <th id="email" class="sort">
+                Email
+            </th>
+            <th id="phone" class="sort">
+                Phone
+            </th>
+            <th id="priority" class="sort">
+                Priority
+            </th>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td>
+                <input type="checkbox" name="members" value={{member._id}} />
+            </td>
+            <td>
+                {{member.stunum}}
+            </td>
+            <td>
+                {{member.lastName}}
+            </td>
+            <td>
+                {{member.firstName}}
+            </td>
+            <td>
+                {{member.preferredName}}
+            </td>
+            <td>
+                {% for d in member.department %}<span class="dept-tag status-{{d.status}}">{{d.dept}} </span>{% endfor %}
+            </td>
+
+            {#
+            <td>
+                {{member.gender}}
+            </td>
+            <td>
+                {{member.birthday}}
+            </td> #}
+            <td>
+                <a href="mailto:{{member.email}}">{{member.email}}</a>
+            </td>
+            <td>
+                <a href="tel:{{member.phone}}">{{member.phone}}</a>
+            </td>
+            <td>
+                {{member.priority}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+{% endblock %}

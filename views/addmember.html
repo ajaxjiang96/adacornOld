@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Add Member</h1>
+<form method="post" action="/addmember">
+    <table>
+        <tr>
+            <td>
+                First Name
+            </td>
+            <td>
+                <input type="text" name="firstName" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name
+            </td>
+            <td>
+                <input type="text" name="lastName" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Preferred Name
+            </td>
+            <td>
+                <input type="text" name="preferredName" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Birthday
+            </td>
+            <td>
+                <input type="date" name="birthday" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender
+            </td>
+            <td>
+                <input id="genderM" type="radio" name="gender" value="male" required/>
+                <label for="genderM">Male</label>
+                <input id="genderF" type="radio" name="gender" value="female" required/>
+                <label for="genderF">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                email
+            </td>
+            <td>
+                <input type="email" name="email" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Phone
+            </td>
+            <td>
+                <input type="String" name="phone" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Department(s)
+            </td>
+            <td>
+                <input type="checkbox" name="department" value="alpha" />
+                <label for="alpha">Alpha</label><br />
+                <input type="checkbox" name="department" value="beta" />
+                <label for="alpha">Beta</label><br />
+                <input type="checkbox" name="department" value="design" />
+                <label for="alpha">Design</label><br />
+                <input type="checkbox" name="department" value="hr" />
+                <label for="alpha">HR</label><br />
+                <input type="checkbox" name="department" value="marketing" />
+                <label for="alpha">Marketing</label><br />
+                <input type="checkbox" name="department" value="pr" />
+                <label for="alpha">PR</label><br />
+                <input type="checkbox" name="department" value="sponsor" />
+                <label for="alpha">Sponsor</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button>Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

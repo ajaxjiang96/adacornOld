@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="apple-mobile-web-app-title" content="doo.">
+        <meta http-equiv="Cache-Control" content="private"/>
+        <link href="../images/favicon.png" rel="apple-touch-icon-precomposed">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-touch-fullscreen" content="yes"/>
+        <link rel="stylesheet" href="../css/main.css" type="text/css">
+        <!-- <link rel="stylesheet" href="css/animations.css" type="text/css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../js/scrollfix.js"></script>
+        <script src="../js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+        <title>ADAcorn</title>
+    </head>
+
+    <body>
+        <a href="/">
+            <h1>ADAcorn |
+                <img id="logo-long" src="img/logo-long.svg"/></h1>
+        </a>
+        <ul id="nav">
+            <!-- Navbar here -->
+            <li id="home" class="hidden">
+                <a id="homeA" class="hidden" href="/"><img id="logo-min" src="img/logo.svg"/></a>
+            </li>
+            <li>
+                <a href="/search">Search</a>
+            </li>
+            <li>
+                <a href="/m">Members</a>
+            </li>
+            <li>
+                <a href="/d">Departments</a>
+            </li>
+            <li>
+                <a href="/addmember">Add Member</a>
+            </li>
+            <li id="quickSearch">
+                <input id="quickSearchInput" type="text" name="search" placeholder="Quick Search">
+            </li>
+        </ul>
+        {% block body %}{% endblock %}
+
+        <footer>
+            <div class="footer-content">
+                <p>
+                    ©UTADA 2017. All rights reserverd.
+                </p>
+            </div>
+        </footer>
+    </body>
+
+</html>

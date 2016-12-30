@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Member List</h1>
+{% for d in departments %}
+<h2>{{d.name}}</h2>
+<table>
+    <tr>
+        <td>
+            President
+        </td>
+        <td>
+            {{d.p}}
+        </td>
+    </tr>
+    {% for vp in d.vp %}
+    <tr>
+        <td>
+            Vice-President
+        </td>
+        <td>
+            {{vp}}
+        </td>
+    </tr>
+    {% endfor%}
+    <tr>
+        <td>
+            Members
+        </td>
+        <td>
+            {{ d.members.length }}
+        </td>
+    </tr>
+</table>
+
+    {% endfor %}
+
+{% endblock %}
