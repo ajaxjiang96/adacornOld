@@ -4,82 +4,18 @@
         <h1>Hello,
             {{user.firstName}}</h1>
         <!-- <div id="profile"> -->
-        <div class="panel">
-            <h2>Profile</h2>
-            <table id="profileTable">
-                <tr>
-                    <th class="vertical">
-                        First Name
-                    </th>
-                    <td>
-                        {{user.firstName}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Last Name
-                    </th>
-                    <td>
-                        {{user.lastName}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Preferred Name
-                    </th>
-                    <td>
-                        {{user.preferredName}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Student Number
-                    </th>
-                    <td>
-                        {{user.stunum}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        UTmail
-                    </th>
-                    <td>
-                        {{user.UTmail}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Phone
-                    </th>
-                    <td>
-                        {{user.phone}}
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Status
-                    </th>
-                    <td>
-                        <span class="status-text-{{user.status}}">{{user.status}}
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="vertical">
-                        Year
-                    </th>
-                    <td>
-                        {{user.year}}
-                    </td>
-                </tr>
-            </table>
-            <!-- <div id="profilePhotoContainer">
-                {% if user.profilePhoto %}
-                    <img id="profilePhoto" src="{{user.profilePhoto}}" />
-                {% else %}
-                    <img id="profilePhoto" src="../img/profile-placeholder.svg" />
-                {% endif %}
-            </div> -->
+        <div id="upcomingEvents" class="panel">
+            <h2>Upcoming Events</h2>
+            <div class="event-overview-container">
+                Nothing Yet.
+            </div>
+        </div>
+
+        <div id="applications" class="panel">
+            <h2>Applications</h2>
+            <div class="event-overview-container">
+                Nothing Yet.
+            </div>
         </div>
 
         <div class="panel">
@@ -112,15 +48,6 @@
                 {% endfor %}
             </table>
         </div>
-        <div class="panel">
-            <h2>Profile Photo</h2>
-            <!-- <td rowspan="6" class="profilePhotoContainer"> -->
-            {% if user.profilePhoto %}
-                <img id="profilePhoto" src="{{user.profilePhoto}}"/>
-            {% else %}
-                <img id="profilePhoto" src="../img/profile-placeholder.svg"/>
-            {% endif %}
-            <!-- </td> -->
-        </div>
+
     </div>
     {% endblock%}

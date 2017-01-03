@@ -6,7 +6,7 @@ let Schema = mongoose.Schema;
 let departmentSchema = new Schema(
     {
         name: {
-            type: String, required:true
+            type: String, required: true
         },
         p: {
             type: String, required: true
@@ -20,6 +20,58 @@ let departmentSchema = new Schema(
     },
     {
         collection: 'departments'
+    }
+);
+
+let notificationSchema = new Schema (
+    {
+        owner: {
+            type: String, required: true
+        },
+        title: {
+            type: String
+        },
+        source: {
+            type: String, required: true
+        },
+        read: {
+            type: "boolean", default:false, required: true
+        },
+    }, {
+        collection: 'notifications'
+    }
+);
+
+let eventSchema = new Schema (
+    {
+        initiator: {
+            type: String, required: true
+        },
+        department: {
+            type: String, required: true
+        },
+        date: {
+            type: "date", required: true
+        },
+        location: {
+            type: String, required: true
+        }
+    }, {
+        collection: 'notifications'
+    }
+);
+
+let applicationSchema = new Schema (
+    {
+        applicant: {
+            type: String, required: true
+        },
+        type: {
+            type: String, required: true
+        },
+        department: {
+            type: String, required: true
+        }
     }
 );
 
@@ -85,6 +137,9 @@ let memberSchema = new Schema(
         assessment: {
             type: "number"
         },
+        notifications: {
+            type: [String], default: []
+        }
         // if the member is participating any projects
         // project: {
         //     project: [Schema.Types.ObjectId]

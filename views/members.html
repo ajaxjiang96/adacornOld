@@ -2,7 +2,7 @@
 <script src="../js/members.js"></script>
 {% include "memberActionBar.html" %}
 
-<div id="actionBar">
+<!-- <div id="actionBar">
     Filter:
     <select id="filterSelector" name="filter">
         <option value="default" selected disabled>---filter---</option>
@@ -20,16 +20,85 @@
     <button id="downloadCSVButton">CSV</button>
     <button id="downloadJSONButton">JSON</button>
 
-</div>
+</div> -->
+<div id="non-printable" class="container">
+    <div class="panel">
 
-<form id="memberForm">
-    <table>
+
+    <form id="memberForm" >
+        <table id="section-to-print">
+            <tr>
+                <th>
+                    <input type="checkbox" id="checkAll" />
+                </th>
+                <th id="stunum" class="sort">
+                    Student #
+                </th>
+                <th id="lastName" class="sort">
+                    Last Name
+                </th>
+                <th id="firstName" class="sort">
+                    First Name
+                </th>
+                <th id="preferredName" class="sort">
+                    Preferred Name
+                </th>
+                <th id="dept" class="">
+                    Departments
+                </th>
+                <th id="email" class="sort">
+                    Email
+                </th>
+                <th id="phone" class="sort">
+                    Phone
+                </th>
+                <!-- <th id="priority" class="sort">
+                    Priority
+                </th> -->
+            </tr>
+            {% for member in members %}
+            <tr>
+                <td>
+                    <input type="checkbox" name="members" value={{member._id}} />
+                </td>
+                <td>
+                    {{member.stunum}}
+                </td>
+                <td>
+                    {{member.lastName}}
+                </td>
+                <td>
+                    {{member.firstName}}
+                </td>
+                <td>
+                    {{member.preferredName}}
+                </td>
+                <td>
+                    {% for d in member.department %}<span class="dept-tag status-{{d.status}}">{{d.dept}} </span>{% endfor %}
+                </td>
+                <td>
+                    <a href="mailto:{{member.email}}">{{member.email}}</a>
+                </td>
+                <td>
+                    <a href="tel:{{member.phone}}">{{member.phone}}</a>
+                </td>
+                <!-- <td>
+                    {{member.priority}}
+                </td> -->
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+        </div>
+</div>
+<div id="printable">
+    <table id="section-to-print">
         <tr>
             <th>
                 <input type="checkbox" id="checkAll" />
             </th>
             <th id="stunum" class="sort">
-                ID
+                Student #
             </th>
             <th id="lastName" class="sort">
                 Last Name
@@ -85,5 +154,6 @@
         </tr>
         {% endfor %}
     </table>
-</form>
+</div>
+
 {% endblock %}

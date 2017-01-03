@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    background-color: #ddd;
 }
 
 div#heading {
@@ -28,31 +29,32 @@ div.panel {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
-    border-radius: 4px;
+    padding: 0px;
+    /*border-radius: 4px;*/
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
-    background-color: white;
+    background-color: #fff;
     overflow-x:auto;
 }
 
+div.event-overview-container {
+    padding: 10px;
+    border-top: 0.25px solid #000;
+}
+
+h2 {
+    padding: 10px;
+}
 div.profilePanel{
     width: 70%;
 }
 
 div.profilePhotoPanel {
-    width: 20%;
+    height: 151px;
 }
+
 
 div#profile {
     display: inline-block;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
 }
 
 li {
@@ -67,6 +69,105 @@ li a {
     text-decoration: none;
 }
 
+/*.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}*/
+ul {height: 42px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.right {
+    right:0;
+
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #000}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#profileA {
+    padding: 0;
+}
+#profileIcon {
+    float: right;
+}
 #quickSearch {
     float: right;
     margin: 4px;
@@ -119,6 +220,10 @@ img#logo-min {
 img#logo-long {
     height: 28px;
     margin: 20px;
+}
+
+img#profileIconImg {
+    height: 42px;
 }
 
 a {
@@ -210,7 +315,10 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){
+    /*background-color: #f2f2f2;*/
+    background-color: #eee;
+}
 
 th {
     background-color: #333;
@@ -237,8 +345,14 @@ th.sort:hover {
     height: 100px;
 }
 
+#profilePhoto:hover {
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+transform: scale(1.1);}
+
 .profilePhotoContainer {
     /*padding:0;*/
+    overflow:auto;
     width: 112px;
 }
 
@@ -284,6 +398,7 @@ th.sort:hover {
 footer {
     background-color: #333;
     color:white;
+    bottom: 0;
 }
 
 div.footer-content {
@@ -291,3 +406,14 @@ div.footer-content {
     width: 50%;
     margin: auto;
 }
+
+#printable { display: none; }
+
+   @media print
+   {
+       #non-printable { display: none; }
+       #printable { display: block; }
+       tr {
+           height: 16px;
+       }
+   }

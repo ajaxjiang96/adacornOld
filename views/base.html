@@ -22,7 +22,7 @@
     <body>
         <div id="heading">
             <a href="/">
-                    <img id="logo-long" src="../img/logo-long.svg" />
+                <img id="logo-long" src="../img/logo-long.svg"/>
             </a>
         </div>
         <ul id="nav">
@@ -36,11 +36,41 @@
             <li>
                 <a href="/m">Members</a>
             </li>
-            <li>
+            <li class="dropdown">
                 <a href="/d">Departments</a>
+                <div class="dropdown-content">
+                    <a href="/d/alpha">Alpha</a>
+                    <a href="/d/beta">Beta</a>
+                    <a href="/d/Design">Design</a>
+                    <a href="/d/marketing">Marketing</a>
+                    <a href="/d/hr">HR</a>
+                    <a href="/d/pr">PR</a>
+                    <a href="/d/sponsor">sponsor</a>
+                </div>
             </li>
-            <li>
-                <a href="/addmember">Add Member</a>
+            <li class="dropdown">
+                <a href="/e">Events</a>
+                <div class="dropdown-content">
+                    <a href="/e">Upcoming Events</a>
+                    <a href="/e">New Event</a>
+                </div>
+            </li>
+            <li id="profileIcon" class="dropdown">
+                <a id="profileA" href="javascript:void(0)" class="dropbtn">
+                    {% if user.profilePhoto %}
+                        <img id="profileIconImg" src="{{user.profilePhoto}}"/>
+                    {% else %}
+                        <img id="profileIconImg" src="../img/profile-placeholder.svg"/>
+                    {% endif %}
+                </a>
+                <div class="dropdown-content right">
+                    <a href="/u">My profile</a>
+                    <a href="#">Notifications</a>
+                    <a href="#">My events</a>
+                </div>
+                {# <div class="dropdown-content">
+                    <p>Hello World!</p>
+                </div> #}
             </li>
             <li id="quickSearch">
                 <input id="quickSearchInput" type="text" name="search" placeholder="Quick Search">

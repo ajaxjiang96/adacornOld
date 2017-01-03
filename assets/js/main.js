@@ -9,6 +9,8 @@ $(document).ready(function() {
         $("input[name=members]").prop("checked", false);
         $("#checkAll").on("click", checkAll);
     };
+
+
     $('#nav').scrollFix({zIndex:1000});
     $("#checkAll").on("click", checkAll);
 });

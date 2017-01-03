@@ -1,5 +1,31 @@
 let db = require('../models/data');
 
+let user= {
+    "lastName": "Jiang",
+    "firstName": "Jiacheng",
+    "firstNameEnglish": "Ajax",
+    "chineseName": "蒋佳成",
+    "preferredName": "Ajax",
+    "phone": "6477679106",
+    "email": "ajax.jiang@mail.utoronto.ca",
+    "UTmail": "ajax.jiang@mail.utoronto.ca",
+    "stunum": "1001359996",
+    "wechat": "AjaxJiang96",
+    "profilePhoto": "http://i-7.vcimg.com/trim/3bfdbfddb7e4eef342f4b38f944c3ed192396/trim.jpg",
+    "department": [{
+        "dept": "core",
+        "status": "active",
+        "level": 1
+    }, {
+        "dept": "design",
+        "status": "active",
+        "level": 4
+    }],
+    "year": "3",
+    "status": "active",
+    "major": "Computer Science"
+}
+
 let helper = {
     sort: {
         // lastName: function(a, b) {
@@ -41,7 +67,23 @@ let helper = {
 }
 
 module.exports = {
-    getHome: function(req, res) {
+    getDashboard: function(req, res) {
+        if (req.params.id) {
+            return res.send(req.params.id)
+        } else {
+            return res.render("index.html", {
+                user: user
+            });
+        }
+    },
+    getProfile: function(req, res) {
+        if (req.params.id) {
+            return res.send(req.params.id)
+        } else {
+            return res.render("profile.html", {
+                user: user
+            });
+        }
         // db.Member.find({},
         //     function(err, members) {
         //         if (err) {
@@ -52,32 +94,7 @@ module.exports = {
         //             });
         //         }
         //     });
-        return res.render("index.html", {
-            user: {
-                "lastName": "Jiang",
-                "firstName": "Jiacheng",
-                "firstNameEnglish": "Ajax",
-                "chineseName": "蒋佳成",
-                "preferredName": "Ajax",
-                "phone": "6477679106",
-                "email": "ajax.jiang@mail.utoronto.ca",
-                "UTmail": "ajax.jiang@mail.utoronto.ca",
-                "stunum": "1001359996",
-                "wechat": "AjaxJiang96",
-                "department": [{
-                    "dept": "core",
-                    "status": "active",
-                    "level": 1
-                }, {
-                    "dept": "design",
-                    "status": "active",
-                    "level": 4
-                }],
-                "year": "3",
-                "status": "active",
-                "major": "Computer Science"
-            }
-        });
+
     },
 
     getAllMembers: function(req, res) {
@@ -104,7 +121,8 @@ module.exports = {
                                 return 0;
                             }
 
-                        })
+                        }),
+                        user: user
                     });
                 }
             })
@@ -112,7 +130,7 @@ module.exports = {
 
     getAddMember: function(req, res) {
         // id authentication needed
-        res.render("addmember.html");
+        res.render("addmember.html", {user: user});
     },
 
     addMember: function(req, res) {
@@ -144,7 +162,8 @@ module.exports = {
                 // console.log(departments[i]);
             }
             return res.render("departments.html", {
-                departments: departments
+                departments: departments,
+                user: user
             });
         });
     },
@@ -172,7 +191,8 @@ module.exports = {
 
                                 return res.render("department.html", {
                                     dept: dept,
-                                    members: members
+                                    members: members,
+                                    user: user
                                 });
                             }
                         })
@@ -181,6 +201,28 @@ module.exports = {
                 }
             }
         });
+
+    },
+
+    getSearch: function(req, res) {
+        //get search page
+        res.render("search.html", {
+            user: user
+        });
+    },
+
+    getEvents:function(req, res) {
+        //get event page
+        res.render("events.html", {
+            user: user
+        });
+    },
+
+    getApplications: function(req, res) {
+
+    },
+
+    getNotifications: function(req, res) {
 
     },
 

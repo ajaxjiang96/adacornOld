@@ -52,15 +52,25 @@ app.listen(process.env.PORT||3000, function () {
 //         sys.getAllMembers
 //     }
 // });
-app.get('/', sys.getHome);
+app.get('/', sys.getDashboard);
 app.get('/m', sys.getAllMembers);
 // app.get('/m/:id', sys.getMember);
 app.get("/d", sys.getAllDepartments);
 app.get("/d/:dept", sys.getDept)
 app.get("/dj", sys.parseDeptJSON);
 
-app.get("/a", sys.getAddMember);
+app.get("/e", sys.getEvents);
+
+app.get("/a", sys.getApplications);
+
+app.get("/n", sys.getNotifications);
+
 app.get("/p", sys.parseDept);
+
+app.get("/u", sys.getProfile);
+app.get("/u/:id", sys.getProfile);
+
+app.get("/search", sys.getSearch);
 
 app.post('/addmember', sys.addMember);
 app.post('/delete', sys.deleteMember);
