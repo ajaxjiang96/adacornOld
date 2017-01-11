@@ -14,13 +14,15 @@ let app = express();
 nunjucks.configure('views', {autoescape: true, express: app});
 
 app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'semantic')));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
-// passport.use(new LocalStrategy(db.User.authenticate()));
+passport.use(new LocalStrategy(db.Member.authenticate()));
 
-// passport.serializeUser(db.User.serializeUser());
-// passport.deserializeUser(db.User.deserializeUser());
+passport.serializeUser(db.Member.serializeUser());
+passport.deserializeUser(db.Member.deserializeUser());
 
 
 app.use(function(req, res, next) {
@@ -76,14 +78,14 @@ app.post('/addmember', sys.addMember);
 app.post('/delete', sys.deleteMember);
 
 
-// app.get('/login', (req,res)=> {
-//     //console.log(req.user);
-//     if(req.user !== undefined){
-//         res.redirect('/');
-//         return;
-//     }
-//     res.render('login.html');
-// });
+app.get('/login', (req,res)=> {
+    //console.log(req.user);
+    if(req.user !== undefined){
+        res.redirect('/');
+        return;
+    }
+    res.render('login.html');
+});
 //
 // app.get('/signup', (req, res)=>{
 //     if(req.user !== undefined){

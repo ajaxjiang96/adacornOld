@@ -153,7 +153,7 @@ let memberSchema = new Schema(
     }
 );
 
-// userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
+memberSchema.plugin(passportLocalMongoose, {usernameField: 'utmail'});
 
 mongoose.connect('mongodb://localhost/adacorndb');
 

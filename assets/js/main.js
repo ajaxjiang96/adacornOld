@@ -13,4 +13,7 @@ $(document).ready(function() {
 
     $('#nav').scrollFix({zIndex:1000});
     $("#checkAll").on("click", checkAll);
+    $('#downloadPDFButton').on("click", function() {
+        window.print();
+    })
 });

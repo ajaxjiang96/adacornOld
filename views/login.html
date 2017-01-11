@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-title" content="doo.">
+    <meta http-equiv="Cache-Control" content="private" />
+    <link href="../images/favicon.png" rel="apple-touch-icon-precomposed">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+
+    <title>UTADA | ADAcorn - Let us handle your club</title>
+    <style type="text/css">
+    body {
+      background-color: #DADADA;
+    }
+    body > .grid {
+      height: 86.5%;
+    }
+    body {
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+    }
+  </style>
+  <script>
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'utmail',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+  </script>
+</head>
+
+<body><div id="heading" class="non-printable">
+    <a href="/">
+        <img id="logo-long" src="../img/logo-long-white.svg" />
+    </a>
+</div>
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+
+                    <form action="/login" method="post" class="ui large form">
+                        <div class="ui segment">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="email" name="utmail" placeholder="UTmail address">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input type="password" name="password" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="ui fluid large submit button">Login</div>
+
+                        </div>
+
+
+                        <!-- <input type="button" value="Login"/> -->
+
+                    </form>
+
+        </div>
+
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <p>
+                ©UTADA 2017. All rights reserverd.
+            </p>
+        </div>
+    </div>
+    <!-- <footer class="non-printable">
+        <div class="footer-content">
+
+        </div>
+    </footer> -->
+
+</body>
+
+</html>
