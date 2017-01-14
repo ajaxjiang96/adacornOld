@@ -1,6 +1,6 @@
 let db = require('../models/data');
 
-let user= {
+let user = {
     "lastName": "Jiang",
     "firstName": "Jiacheng",
     "firstNameEnglish": "Ajax",
@@ -67,12 +67,38 @@ let helper = {
 }
 
 module.exports = {
+    login: function(req, res) {
+        console.log("login: " + req.body.UTmail + " " + req.body.password);
+        let email = req.body.UTmail;
+        db.Member.authenticate()(email, req.body.password, function(err, user, options) {
+            if (err) {
+                return res.send("Cannot log the user in.");
+            }
+            if (user === false) {
+                res.send('Username or password invalid. Please try again.');
+            } else {
+                req.login(user, function(err) {
+                    if (err) {
+                        return res.send("Cannot log the user in. Please try again.");
+                    }
+                    res.redirect('/');
+                });
+            }
+        });
+    },
+
+    logout: function(req, res) {
+        // clear session, return to main page
+        req.logout();
+        res.redirect('/');
+    },
+
     getDashboard: function(req, res) {
         if (req.params.id) {
             return res.send(req.params.id)
         } else {
             return res.render("index.html", {
-                user: user
+                user: req.user
             });
         }
     },
@@ -81,7 +107,7 @@ module.exports = {
             return res.send(req.params.id)
         } else {
             return res.render("profile.html", {
-                user: user
+                user: req.user
             });
         }
         // db.Member.find({},
@@ -122,7 +148,7 @@ module.exports = {
                             }
 
                         }),
-                        user: user
+                        user: req.user
                     });
                 }
             })
@@ -130,7 +156,9 @@ module.exports = {
 
     getAddMember: function(req, res) {
         // id authentication needed
-        res.render("addmember.html", {user: user});
+        res.render("addmember.html", {
+            user: req.user
+        });
     },
 
     addMember: function(req, res) {
@@ -163,7 +191,7 @@ module.exports = {
             }
             return res.render("departments.html", {
                 departments: departments,
-                user: user
+                user: req.user
             });
         });
     },
@@ -192,7 +220,7 @@ module.exports = {
                                 return res.render("department.html", {
                                     dept: dept,
                                     members: members,
-                                    user: user
+                                    user: req.user
                                 });
                             }
                         })
@@ -207,14 +235,14 @@ module.exports = {
     getSearch: function(req, res) {
         //get search page
         res.render("search.html", {
-            user: user
+            user: req.user
         });
     },
 
-    getEvents:function(req, res) {
+    getEvents: function(req, res) {
         //get event page
         res.render("events.html", {
-            user: user
+            user: req.user
         });
     },
 
@@ -355,5 +383,51 @@ module.exports = {
             }
         });
         // }
+    },
+
+    initialize: function(req, res) {
+        db.Member.find({}, function(err, users) {
+            if (err) res.send(err);
+            for (let i = 0; i < users.length; i++) {
+                db.Member.findOne({
+                    UTmail: users[i].UTmail
+                }, function(err, user) {
+                    user.setPassword(user.stunum, function(err) {
+                        if (!err) {
+                            user.save(function(err) {
+                                if (err) {
+                                    console.log(user.stunum + " Fail save ");
+                                } else {
+                                    console.log(user.stunum + "success");
+                                }
+
+                            });
+                        } else {
+                            console.log(user.stunum + " Fail Set ");
+                        }
+                    });
+                });
+            }
+            return res.send("done");
+        });
     }
+    // initialize: function(req, res) {
+    //     db.Member.findOne({
+    //         stunum: "1002795040"
+    //     }, function(err, user) {
+    //         user.setPassword("1002795040", function(err) {
+    //             if (!err) {
+    //                 user.save(function(err) {
+    //                     if (err) {
+    //                         return res.send(err);
+    //                     } else {
+    //                         return res.send("Success");
+    //                     }
+    //                 });
+    //             } else {
+    //                 return res.send("Fail Set");
+    //             }
+    //         });
+    //     });
+    // }
 }
