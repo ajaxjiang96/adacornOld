@@ -8,7 +8,17 @@ let session = require('express-session');
 let db = require('./models/data');
 let passport = require('passport');
 let LocalStrategy = require('passport-local').Strategy;
+let nodemailer = require('nodemailer');
 
+
+
+// send mail with defined transport object
+// transporter.sendMail(mailOptions, function(error, info){
+//     if(error){
+//         return console.log(error);
+//     }
+//     console.log('Message sent: ' + info.response);
+// });
 
 let app = express();
 nunjucks.configure('views', {autoescape: true, express: app});
@@ -92,6 +102,10 @@ app.get('/login', (req,res)=> {
 });
 
 app.post('/login', adacorn.login);
+app.post('/email', adacorn.sendMail);
+app.post('/newEmail', adacorn.getMail);
+
+
 app.get('/logout', adacorn.logout);
 
 app.get('/initialize', adacorn.initialize);

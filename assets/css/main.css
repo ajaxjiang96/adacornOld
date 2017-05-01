@@ -32,6 +32,7 @@ div.panel {
     margin-right: auto;
     padding: 0px;
     /*border-radius: 4px;*/
+    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
     background-color: #fff;
     overflow-x: auto;

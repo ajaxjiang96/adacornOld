@@ -10,8 +10,26 @@ $(document).ready(function() {
             $("#memberForm").submit();
         }
     });
+
     $('.sort').on("click", function() {
         location.href = ("/m?sort=" + this.id);
         console.log("click");
     });
+
+    $("#emailButton").on("click", function() {
+        $("#memberForm").prop("action", "/newEmail");
+        $("#memberForm").prop("method", "post");
+        $("#memberForm").submit();
+    });
+
+    $("#email").ajaxSubmit({
+        url: '/email',
+        type: 'post',
+        success: function(res) {
+            console.log("success");
+            console.log(res);
+            $("emailContainer").html(res.html);
+        }
+    })
+
 });

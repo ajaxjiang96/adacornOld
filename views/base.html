@@ -1,92 +1,100 @@
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="../images/favicon.png" type="image/x-icon">
-        <meta name="HandheldFriendly" content="true">
-        <meta name="apple-mobile-web-app-title" content="doo.">
-        <meta http-equiv="Cache-Control" content="private"/>
-        <link href="../images/favicon.png" rel="apple-touch-icon-precomposed">
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-touch-fullscreen" content="yes"/>
-        <link rel="stylesheet" href="../css/main.css" type="text/css">
-        <!-- <link rel="stylesheet" href="css/animations.css" type="text/css"> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="../js/scrollfix.js"></script>
-        <script src="../js/main.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-title" content="doo.">
+    <meta http-equiv="Cache-Control" content="private" />
+    <link href="../images/favicon.png" rel="apple-touch-icon-precomposed">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/animations.css" type="text/css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../js/scrollfix.js"></script>
+    <script src="../js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <script src="http://malsup.github.com/jquery.form.js"></script>
 
-        <title>UTADA | ADAcorn - Let us handle your club</title>
-    </head>
+    <title>UTADA | ADAcorn - Let us handle your club</title>
+</head>
 
-    <body>
-        <div id="heading" class="non-printable">
-            <a href="/">
-                <img id="logo-long" src="../img/logo-long-white.svg"/>
-            </a>
-        </div>
-        <ul id="nav" class="non-printable">
-            <!-- Navbar here -->
-            <li id="home" class="hidden">
-                <a id="homeA" class="hidden" href="/"><img id="logo-min" src="../img/logo.svg"/></a>
-            </li>
-            <li>
-                <a href="/search">Search</a>
-            </li>
-            <li>
-                <a href="/m">Members</a>
-            </li>
-            <li class="dropdown">
-                <a href="/d">Departments</a>
-                <div class="dropdown-content">
-                    <a href="/d/alpha">Alpha</a>
-                    <a href="/d/beta">Beta</a>
-                    <a href="/d/Design">Design</a>
-                    <a href="/d/marketing">Marketing</a>
-                    <a href="/d/hr">HR</a>
-                    <a href="/d/pr">PR</a>
-                    <a href="/d/sponsor">sponsor</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="/e">Events</a>
-                <div class="dropdown-content">
-                    <a href="/e">Upcoming Events</a>
-                    <a href="/e">New Event</a>
-                </div>
-            </li>
-            <li id="profileIcon" class="dropdown">
-                <a id="profileA" href="javascript:void(0)" class="dropbtn">
+<body>
+    <div id="heading" class="non-printable">
+        <a href="/">
+            <img id="logo-long" src="../img/logo-long-white.svg" />
+        </a>
+    </div>
+    <ul id="nav" class="non-printable">
+        <!-- Navbar here -->
+        <li id="home" class="hidden">
+            <a id="homeA" class="hidden" href="/"><img id="logo-min" src="../img/logo.svg" /></a>
+        </li>
+        <li>
+            <a href="/search">Search</a>
+        </li>
+        <li>
+            <a href="/m">Members</a>
+        </li>
+        <li class="dropdown">
+            <a href="/d">Departments</a>
+            <div class="dropdown-content">
+                <a href="/d/alpha">Alpha</a>
+                <a href="/d/beta">Beta</a>
+                <a href="/d/Design">Design</a>
+                <a href="/d/marketing">Marketing</a>
+                <a href="/d/hr">HR</a>
+                <a href="/d/pr">PR</a>
+                <a href="/d/sponsor">sponsor</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="/e">Events</a>
+            <div class="dropdown-content">
+                <a href="/e">Upcoming Events</a>
+                <a href="/e">New Event</a>
+            </div>
+        </li>
+        <li id="profileIcon" class="dropdown">
+            <a id="profileA" href="javascript:void(0)" class="dropbtn">
                     {% if user.profilePhoto %}
                         <img id="profileIconImg" src="{{user.profilePhoto}}"/>
                     {% else %}
                         <img id="profileIconImg" src="../img/profile-placeholder.svg"/>
                     {% endif %}
                 </a>
-                <div class="dropdown-content right">
-                    <a href="/u">{{user.firstName}} {{user.lastName}}</a>
-                    <a href="/u">My profile</a>
-                    <a href="#">Notifications</a>
-                    <a href="#">My events</a>
-                    <a href="/logout">Log out</a>
-                </div>
-                {# <div class="dropdown-content">
-                    <p>Hello World!</p>
-                </div> #}
-            </li>
-            <li id="quickSearch">
-                <input id="quickSearchInput" type="text" name="search" placeholder="Quick Search">
-            </li>
-        </ul>
-        {% block body %}{% endblock %}
-
-        <footer class="non-printable">
-            <div class="footer-content">
-                <p>
-                    ©UTADA 2017. All rights reserverd.
-                </p>
+            <div class="dropdown-content right">
+                <a href="/u">{{user.firstName}} {{user.lastName}}</a>
+                <a href="/u">My profile</a>
+                <a href="#">Notifications</a>
+                <a href="#">My events</a>
+                <a href="/logout">Log out</a>
             </div>
-        </footer>
-    </body>
+            {#
+            <div class="dropdown-content">
+                <p>Hello World!</p>
+            </div> #}
+        </li>
+        <li id="quickSearch">
+            <input id="quickSearchInput" type="text" name="search" placeholder="Quick Search">
+        </li>
+    </ul>
+    <div id="container" class="ui container">{% block body %}{% endblock %}</div>
+
+
+    <footer class="non-printable">
+        <div class="footer-content">
+            <p>
+                ©UTADA 2017. All rights reserverd.
+            </p>
+        </div>
+    </footer>
+</body>
 
 </html>

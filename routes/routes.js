@@ -1,54 +1,13 @@
 let db = require('../models/data');
+let nodemailer = require('nodemailer');
 
-let user = {
-    "lastName": "Jiang",
-    "firstName": "Jiacheng",
-    "firstNameEnglish": "Ajax",
-    "chineseName": "蒋佳成",
-    "preferredName": "Ajax",
-    "phone": "6477679106",
-    "email": "ajax.jiang@mail.utoronto.ca",
-    "UTmail": "ajax.jiang@mail.utoronto.ca",
-    "stunum": "1001359996",
-    "wechat": "AjaxJiang96",
-    "profilePhoto": "http://i-7.vcimg.com/trim/3bfdbfddb7e4eef342f4b38f944c3ed192396/trim.jpg",
-    "department": [{
-        "dept": "core",
-        "status": "active",
-        "level": 1
-    }, {
-        "dept": "design",
-        "status": "active",
-        "level": 4
-    }],
-    "year": "3",
-    "status": "active",
-    "major": "Computer Science"
-}
+// create reusable transporter object using the default SMTP transport
+var transporter = nodemailer.createTransport('smtps://uoftada%40gmail.com:&b4*o2sfHr@smtp.gmail.com');
+
+// setup e-mail data with unicode symbols
+
 
 let helper = {
-    sort: {
-        // lastName: function(a, b) {
-        //     // console.log(a.lastName  +  b.lastName);
-        //     // return a.lastName - b.lastName;
-        //     if (a.lastName > b.lastName) {
-        //         return 1;
-        //     } else if (a.lastName < b.lastName) {
-        //         return -1;
-        //     } else {
-        //         return 0;
-        //     }
-        // },
-        // stunum: function(a, b) {
-        //     if (a.stunum > b.stunum) {
-        //         return 1;
-        //     } else if (a.stunum < b.stunum) {
-        //         return -1;
-        //     } else {
-        //         return 0;
-        //     }
-        // }
-    },
     parse: {
         department: function(array) {
             for (let i = 0; i < array.length; i++) {
@@ -110,17 +69,6 @@ module.exports = {
                 user: req.user
             });
         }
-        // db.Member.find({},
-        //     function(err, members) {
-        //         if (err) {
-        //             return res.send("Error: Cannot get all members");
-        //         } else {
-        //             return res.render("index.html", {
-        //                 members: helper.sort.byLastName(members)
-        //             });
-        //         }
-        //     });
-
     },
 
     getAllMembers: function(req, res) {
@@ -223,7 +171,7 @@ module.exports = {
                                     user: req.user
                                 });
                             }
-                        })
+                        });
                 } else {
                     res.send("Error: department not found");
                 }
@@ -385,6 +333,45 @@ module.exports = {
         // }
     },
 
+    getMail: function(req, res) {
+        db.Member.find({
+                _id: {
+                    $in: req.body.members
+                }
+            },
+            function(err, members) {
+                if (err) {
+                    return res.send(err);
+                } else {
+                    return res.render("newEmail.html", {
+                        members: members,
+                        user: req.user
+                    });
+                }
+            });
+    },
+
+    sendMail: function(req, res) {
+        let header = "<body style=\"margin:0\"><div id=\"heading\" class=\"non-printable\" style=\"display: inline-block;background-color: #000;margin: 0;padding:10px 20px; width: 100%;\"><a href=\"http://uoftada.com\"><img id=\"logo-long\" src=\"http://uoftada.com/img/logo-long-white.svg\" style=\"height: 28px;margin: 10px;\"/></a></div><div style=\"margin:20px\">"
+        let footer = "</div><footer style=\"background-color: #333; color: white; bottom: 0;\" class=\"non-printable\"> <div class=\"footer-content\" style=\"padding: 10px 0;width: 100%;margin: 10px 20px;\"> <p>Copyright © UTADA 2017. All rights reserverd. </p> </div> </footer></body>"
+        var mailOptions = {
+            from: '' + req.body.from + ' <uoftada@gmail.com>', // sender address
+            to: req.body.to, // list of receivers
+            subject: req.body.subject, // Subject line
+            text: req.body.content, // plaintext body
+            html: header + req.body.content.replace(/\r\n/g, "<br>") + footer // html body
+        };
+
+        transporter.sendMail(mailOptions, function(error, info) {
+            if (error) {
+                return console.log(error);
+            }
+            console.log(mailOptions);
+            console.log('Message sent: ' + info.response);
+            res.send(mailOptions.html);
+        });
+    },
+
     initialize: function(req, res) {
         db.Member.find({}, function(err, users) {
             if (err) res.send(err);
@@ -398,9 +385,8 @@ module.exports = {
                                 if (err) {
                                     console.log(user.stunum + " Fail save ");
                                 } else {
-                                    console.log(user.stunum + "success");
+                                    console.log(user.stunum + " success ");
                                 }
-
                             });
                         } else {
                             console.log(user.stunum + " Fail Set ");
@@ -411,23 +397,4 @@ module.exports = {
             return res.send("done");
         });
     }
-    // initialize: function(req, res) {
-    //     db.Member.findOne({
-    //         stunum: "1002795040"
-    //     }, function(err, user) {
-    //         user.setPassword("1002795040", function(err) {
-    //             if (!err) {
-    //                 user.save(function(err) {
-    //                     if (err) {
-    //                         return res.send(err);
-    //                     } else {
-    //                         return res.send("Success");
-    //                     }
-    //                 });
-    //             } else {
-    //                 return res.send("Fail Set");
-    //             }
-    //         });
-    //     });
-    // }
 }
